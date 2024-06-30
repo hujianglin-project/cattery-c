@@ -1,0 +1,87 @@
+.mine-container {
+  background: #fafafa;
+  height: 100vh;
+}
+
+.header {
+  position: relative;
+  height: 224rpx;
+  box-sizing: border-box;
+  padding: 54rpx 42rpx 70rpx;
+  background: #ffe733;
+}
+
+.header-left {
+  display: flex;
+}
+
+.avater {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 40%;
+  margin-right: 20rpx;
+}
+
+.header-user {
+  padding-top: 10rpx;
+}
+
+.user-name {
+  font-size: 32rpx;
+  color: #333333;
+}
+
+.user-desc {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #333333;
+}
+
+.header-bg {
+  width: 160rpx;
+  height: 160rpx;
+  position: absolute;
+  right: 44rpx;
+  bottom: 0;
+}
+
+.list-content {
+  margin-top: 20rpx;
+}
+
+.mine-list {
+  margin-left: 30rpx;
+  width: 688rpx;
+  height: 188rpx;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+  padding: 50rpx 34rpx;
+  position: relative;
+}
+
+.list-name {
+  color: #333333;
+  font-size: 32rpx;
+}
+
+.list-desc {
+  color: #bfbfbf;
+  font-size: 22rpx;
+  margin-top: 10rpx;
+}
+
+.list-button {
+  position: absolute;
+  right: 34rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 116rpx;
+  height: 52rpx;
+  background: #ffe733;
+  border-radius: 42rpx 42rpx 42rpx 42rpx;
+  font-size: 24rpx;
+  color: #333333;
+  line-height: 52rpx;
+  text-align: center;
+}

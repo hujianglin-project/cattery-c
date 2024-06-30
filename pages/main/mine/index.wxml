@@ -1,0 +1,23 @@
+<!--我的-->
+<view class="mine-container">
+  <view class="header">
+    <view class="header-left">
+      <image src="{{ avater }}" class="avater" />
+      <view class="header-user">
+        <view class="user-name">{{ name }}</view>
+        <view class="user-desc">{{ desc }}</view>
+      </view>
+    </view>
+    <image src="" class="header-bg" />
+  </view>
+
+  <view class="list-content">
+    <view class="mine-list">
+      <view class="list-left">
+        <view class="list-name">意见反馈</view>
+        <view class="list-desc">您的声音是我们前进的动力~</view>
+      </view>
+      <view class="list-button" bindtap="feedback">去反馈</view>
+    </view>
+  </view>
+</view>

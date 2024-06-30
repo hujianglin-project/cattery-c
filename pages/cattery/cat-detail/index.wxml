@@ -1,0 +1,53 @@
+<!--专辑详情-->
+<view class="cat-detail-container">
+  <view class="cat-header">
+    <image src="" class="img" />
+    <view class="cat-status">在售</view>
+    <view class="icon-list">
+      <image class="share" src="" />
+      <image class="like" src="" />
+      <image class="wexin" src="" />
+    </view>
+  </view>
+
+  <view class="cat-desc-content">
+    <view class="cat-name">活泼可爱的英短三花妹妹</view>
+    <view class="cat-desc">
+      5月18日出生，猫妈是三花，猫爸爸是蓝白，一窝里面排行老四，性格活泼，爱互动，亲人，任撸任抱。
+    </view>
+    <view class="cat-update">更新于6月18日13:22</view>
+  </view>
+
+  <view class="cat-choose">
+    <view
+      class="nav-list {{ item.id === checked ? 'check' : ''}}"
+      wx:for="{{ navList }}"
+      wx:for-item="item"
+      wx:key="{{ item.id }}"
+      bindtap="choose"
+      data-id="{{ item.id }}"
+    >
+      {{ item.title }}
+      <view class="check-content" wx:if="{{ item.id === checked }}"></view>
+    </view>
+  </view>
+
+  <block wx:if="{{ checked === 1 }}">
+    <trend-list></trend-list>
+  </block>
+
+  <block wx:if="{{ checked === 2 }}">
+    <comment-list></comment-list>
+  </block>
+
+  <!-- 发表评论 -->
+  <view class="comment-submit-content">
+    <input
+      bindinput="inputComment"
+      class="comment-input"
+      placeholder="说点什么..."
+      placeholder-class="input-placeholder"
+    />
+    <view class="submit">发送</view>
+  </view>
+</view>

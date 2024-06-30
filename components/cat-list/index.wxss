@@ -1,0 +1,107 @@
+.cat-list {
+  width: 688rpx;
+  min-height: 380rpx;
+  padding: 34rpx 44rpx;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 16rpx 16rpx 16rpx 16rpx;
+  margin: 20rpx auto 0;
+  display: flex;
+}
+
+.list-left {
+  flex: 0 0 150rpx;
+  margin-right: 46rpx;
+  padding-top: 10rpx;
+}
+
+.list-img {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.list-fans {
+  font-size: 20rpx;
+  color: #bfbfbf;
+  text-align: center;
+  line-height: 40rpx;
+  margin: 22rpx 0;
+}
+
+.follow {
+  width: 116rpx;
+  height: 42rpx;
+  margin: 0 auto;
+  background: #ffe733;
+  border-radius: 8rpx 8rpx 8rpx 8rpx;
+  font-size: 24rpx;
+  color: #333333;
+  text-align: center;
+  line-height: 42rpx;
+}
+
+.list-name {
+  font-family: MiSans, MiSans;
+  font-weight: 500;
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.list-label {
+  margin: 22rpx 0;
+}
+
+.label {
+  padding: 12rpx;
+  display: inline-block;
+  margin: 0 16rpx 16rpx 0;
+  background: #fff2f5;
+  border-radius: 10rpx 10rpx 10rpx 10rpx;
+  border: 2rpx solid #ffa4b4;
+  font-family: MiSans, MiSans;
+  font-weight: 400;
+  font-size: 20rpx;
+  color: #ff91a5;
+  text-align: center;
+  font-style: normal;
+  text-transform: none;
+}
+
+.list-desc {
+  height: 126rpx;
+  font-family: MiSans, MiSans;
+  font-weight: 400;
+  font-size: 26rpx;
+  color: #333333;
+  line-height: 40rpx;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+}
+
+.list-address {
+  margin-top: 22rpx;
+  width: 144rpx;
+  height: 42rpx;
+  font-size: 20rpx;
+  color: #999999;
+  line-height: 42rpx;
+  text-align: center;
+  background: #f2f2f2;
+  border-radius: 10rpx 10rpx 10rpx 10rpx;
+}
+
+.cat-list.deatil {
+  width: 100%;
+  background: linear-gradient(125deg, #2c3850 0%, #babab9 100%);
+  padding: 170rpx 76rpx 114rpx;
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: 0;
+}
+
+.deatil .list-name,
+.deatil .list-desc {
+  color: #ffffff;
+}

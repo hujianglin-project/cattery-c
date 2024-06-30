@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "专辑详情",
+  "usingComponents": {
+    "trend-list": "/pages/cattery/components/trend/index",
+    "comment-list": "/pages/cattery/components/comment/index"
+  }
+}

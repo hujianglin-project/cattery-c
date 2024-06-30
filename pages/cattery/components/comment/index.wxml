@@ -1,0 +1,8 @@
+<view class="comment-list">
+  <image class="comment-avator" src="" />
+  <view class="comment-content">
+    <view class="comment-name">用户昵称</view>
+    <view class="comment-desc">太可爱了</view>
+    <view class="comment-time">刚刚</view>
+  </view>
+</view>

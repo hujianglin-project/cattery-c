@@ -1,0 +1,21 @@
+.textarea {
+  width: 620rpx;
+  height: 296rpx;
+  background: #f7f7f7;
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+  padding: 40rpx 20rpx;
+  margin: 16px auto;
+}
+
+.submit {
+  width: 512rpx;
+  height: 92rpx;
+  background: #ffe733;
+  border-radius: 62rpx 62rpx 62rpx 62rpx;
+  font-weight: 600;
+  font-size: 32rpx;
+  color: #333333;
+  line-height: 92rpx;
+  text-align: center;
+  margin: 470rpx auto 0;
+}

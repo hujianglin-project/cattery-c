@@ -1,0 +1,44 @@
+.trend-list {
+  margin-bottom: 40rpx;
+  border: 2rpx solid #fafafa;
+}
+
+.trend-title {
+  font-size: 26rpx;
+  color: #333333;
+  line-height: 40rpx;
+}
+
+.trend-img-content {
+  margin: 20rpx 0 0;
+}
+
+.trend-img {
+  width: calc((100% - 28rpx) / 3);
+  height: 180rpx;
+  margin-right: 14rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx 10rpx 10rpx 10rpx;
+}
+
+.trend-img:nth-child(3n + 3) {
+  margin-right: 0;
+}
+
+.trend-date {
+  font-size: 24rpx;
+  color: #bfbfbf;
+}
+
+.trend-bottom {
+  margin-top: 20rpx;
+  display: flex;
+  font-size: 24rpx;
+  color: #bfbfbf;
+  justify-content: space-between;
+}
+
+.like-img {
+  width: 28rpx;
+  height: 24rpx;
+}

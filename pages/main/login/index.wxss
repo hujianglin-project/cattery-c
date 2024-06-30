@@ -1,0 +1,32 @@
+.login-bg {
+  width: 448rpx;
+  height: 412rpx;
+  display: block;
+  margin: 44rpx auto;
+}
+
+.login-name {
+  text-align: center;
+  color: #333333;
+  font-size: 34rpx;
+  line-height: 104rpx;
+}
+
+.login-button {
+  width: 512rpx;
+  height: 92rpx;
+  background: #ffe733;
+  border-radius: 62rpx 62rpx 62rpx 62rpx;
+  margin: 234rpx auto 0;
+  font-size: 32rpx;
+  color: #333333;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.login-privacy {
+  color: #333333;
+  text-align: center;
+  line-height: 104rpx;
+}

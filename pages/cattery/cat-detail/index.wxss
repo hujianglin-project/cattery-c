@@ -1,0 +1,127 @@
+page {
+  background: #ffffff;
+}
+
+.cat-choose {
+  display: flex;
+}
+
+.nav-list {
+  font-weight: 400;
+  font-size: 32rpx;
+  color: #bfbfbf;
+  margin-right: 40rpx;
+  height: 82rpx;
+}
+
+.nav-list.check {
+  font-weight: 600;
+  font-size: 32rpx;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+.check-content {
+  width: 50rpx;
+  height: 10rpx;
+  background: #ffe733;
+  border-radius: 84rpx;
+  margin: 10rpx auto 0;
+}
+
+.cat-detail-container {
+  padding: 0 36rpx 156rpx;
+}
+
+.cat-header {
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  min-height: 360rpx;
+  border-radius: 20rpx 20rpx 20rpx 0rpx;
+}
+
+.cat-status {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 72rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  background: #08ba6f;
+  border-radius: 12rpx 12rpx 12rpx 0rpx;
+  font-size: 24rpx;
+  color: #ffffff;
+  text-align: center;
+}
+
+.icon-list {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+
+.like,
+.wexin {
+  margin-top: 20rpx;
+}
+
+.cat-desc-content {
+  margin: 20rpx 0 40rpx;
+}
+
+.cat-name {
+  height: 40rpx;
+  font-family: MiSans, MiSans;
+  font-weight: 500;
+  font-size: 30rpx;
+  color: #333333;
+  line-height: 40rpx;
+  text-align: left;
+}
+
+.cat-desc {
+  margin: 10rpx 0 20rpx;
+  font-size: 26rpx;
+  color: #333333;
+  line-height: 40rpx;
+}
+
+.cat-update {
+  font-size: 24rpx;
+  color: #bfbfbf;
+}
+
+.comment-submit-content {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 750rpx;
+  height: 120rpx;
+  background: #ffe733;
+  display: flex;
+  align-items: center;
+}
+
+.comment-input {
+  width: 552rpx;
+  height: 80rpx;
+  background: #ffffff;
+  border-radius: 48rpx 48rpx 48rpx 48rpx;
+  box-sizing: border-box;
+  padding: 20rpx 28rpx;
+  font-size: 26rpx;
+  margin: 32rpx 44rpx;
+}
+
+.input-placeholder {
+  color: #999999;
+}
+
+.submit {
+  font-size: 34rpx;
+  color: #000000;
+}

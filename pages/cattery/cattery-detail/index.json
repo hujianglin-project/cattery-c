@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "猫舍详情",
+  "navigationBarBackgroundColor": "#2C3850",
+  "navigationBarTextStyle": "white",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cat-list": "/components/cat-list/index"
+  }
+}
