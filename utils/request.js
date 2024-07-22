@@ -23,9 +23,9 @@ export const ajax = function ({
       "content-type": contentType,
     };
 
-    const appToken = storage.get("token");
+    const appToken = wx.getStorageSync("X-Token");
     if (token) {
-      header["App-Token"] = appToken;
+      header["X-Token"] = appToken;
     }
 
     wx.request({
@@ -38,10 +38,10 @@ export const ajax = function ({
         let statusCode = res.statusCode + "";
         let errorMessage = "";
         // 用户清了缓存，从公众号模板消息进来时会先加载模板页面的一些接口，这个时候app.js可能还没有加载
-        // 不会触发里面的自动登录，没有App-Token，会报错
+        // 不会触发里面的自动登录，没有X-Token，会报错
         if (
           !isLoginPath(url) &&
-          [114, 401, 405].indexOf(res.data.code) !== -1 &&
+          [-2000, 401, 405].indexOf(res.data.code) !== -1 &&
           !appToken
         ) {
           // 如果用户的缓存中没有token，需要进行模拟登录
@@ -49,7 +49,7 @@ export const ajax = function ({
           return;
         }
 
-        if (res.data.code === 114 || res.data.code === 401) {
+        if (res.data.code === -2000 || res.data.code === 401) {
           // 如果用户的缓存中没有token，需要进行模拟登录
           errorMessage = res.data.code;
 
@@ -144,7 +144,7 @@ export const upload = function ({
   return new Promise((resolve, reject) => {
     let header = {};
     if (token) {
-      header["App-Token"] = storage.get("token");
+      header["X-Token"] = wx.getStorageSync("X-Token");
     }
 
     const uploadTask = wx.uploadFile({
@@ -187,7 +187,7 @@ export const fetch = function (
 ) {
   const app = getApp() || {};
   const globalData = { app };
-  let token = globalData.token || wx.getStorageSync("App-Token");
+  let token = globalData.token || wx.getStorageSync("X-Token");
   return new Promise((resolve, reject) => {
     let _header = {
       "content-type": "application/x-www-form-urlencoded; charesolveet=UTF-8",

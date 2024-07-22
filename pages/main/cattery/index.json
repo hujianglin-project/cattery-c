@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "猫舍",
   "usingComponents": {
-    "cat-list": "/components/cat-list/index"
+    "cat-list": "/components/cat-list/index",
+    "component-list": "/components/common-list/list"
   }
 }

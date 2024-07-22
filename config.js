@@ -12,7 +12,7 @@ export const baseUrl = (() => {
       baseUrl = "";
       break;
     case "test":
-      baseUrl = "";
+      baseUrl = "http://www.s3u4.com";
       break;
     case "produce":
       baseUrl = "";

@@ -2,11 +2,14 @@
 <view class="login-container">
   <image src="" class="login-bg" />
   <view class="login-name">欢迎登录猫舍助手</view>
-  <button
+  <!-- <button
     class="login-button"
     open-type="getPhoneNumber"
     bindgetphonenumber="getPhoneNumber"
   >
+    微信一键登录
+  </button> -->
+  <button class="login-button" bindtap="login">
     微信一键登录
   </button>
   <view class="login-privacy">

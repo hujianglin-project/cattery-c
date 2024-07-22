@@ -18,11 +18,11 @@ export const post = (params) =>
     method: "POST",
   });
 
-// 登录
-export const wxLogin = (params) =>
+// 添加意见反馈
+export const suggest = (params) =>
   ajax({
-    url: "/api/wechat/user/login",
-    token: false,
+    url: "/api/user/suggest/create",
+    token: true,
     data: params,
     method: "POST",
   });

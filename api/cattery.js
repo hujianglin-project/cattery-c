@@ -19,10 +19,10 @@ export const post = (params) =>
   });
 
 // 登录
-export const wxLogin = (params) =>
+export const catteryList = (params) =>
   ajax({
-    url: "/api/wechat/user/login",
-    token: false,
+    url: "/api/user/cattery/list",
+    token: true,
     data: params,
-    method: "POST",
+    method: "GET",
   });
