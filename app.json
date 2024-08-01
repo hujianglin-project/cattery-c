@@ -2,7 +2,8 @@
   "pages": [
     "pages/main/cattery/index",
     "pages/main/mine/index",
-    "pages/main/login/index"
+    "pages/main/login/index",
+    "pages/main/bindPhone/index"
   ],
   "subpackages": [
     {
@@ -31,6 +32,9 @@
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "component-dialog": "/components/dialog/dialog"
+  },
   "tabBar": {
     "color": "#000",
     "selectedColor": "#000",

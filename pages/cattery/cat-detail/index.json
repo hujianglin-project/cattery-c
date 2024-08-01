@@ -1,7 +1,9 @@
 {
   "navigationBarTitleText": "专辑详情",
+  "enablePullDownRefresh": true,
   "usingComponents": {
-    "trend-list": "/pages/cattery/components/trend/index",
-    "comment-list": "/pages/cattery/components/comment/index"
+    "component-list": "/components/common-list/list",
+    "trend-list": "../components/trend/index",
+    "comment-list": "../components/comment/index"
   }
 }

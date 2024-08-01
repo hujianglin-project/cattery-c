@@ -1,0 +1,41 @@
+<view
+  class="cat-list {{ type=== 'detail' ? 'detail' : '' }}"
+  bindtap="toDetail"
+>
+  <view class="list-left">
+    <image class="list-img" src="{{ data.catteryAvatar }}" />
+    <view class="fans-count">粉丝量 {{ data.fansCount }}</view>
+    <view class="follow-add" wx:if="{{ !data.isFocus }}" catchtap="follow">
+      +关注
+    </view>
+    <view class="follow-cancle" wx:else catchtap="follow">已关注</view>
+  </view>
+
+  <view class="list-right">
+    <view class="list-name">
+      {{ data.catteryName }}
+    </view>
+    <view class="list-label">
+      <view class="label" wx:for="{{ data.varieties }}" wx:key="index">
+        {{ item }}
+      </view>
+    </view>
+    <view class="list-desc">
+      {{ data.description }}
+    </view>
+    <view class="list-address" wx:if="{{ data.address }}">
+      {{ data.address }}
+    </view>
+    <block wx:if="{{ type === 'detail' }}">
+      <image
+        src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/album-phone.png"
+        class="icon"
+      />
+
+      <image
+        src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/album-share.png"
+        class="icon"
+      />
+    </block>
+  </view>
+</view>

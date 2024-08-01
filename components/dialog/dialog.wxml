@@ -1,0 +1,53 @@
+<view>
+  <view class="weui-mask" style="z-index: {{zIndex - 1}};"></view>
+  <view
+    class="weui-dialog {{dialog.canOverFlow ? 'overflow' : ''}}"
+    style="z-index: {{zIndex}};"
+  >
+    <view class="weui-dialog__hd" wx:if="{{dialog.title}}">
+      <view class="weui-dialog__title" style="{{ dialog.titleStyle }}">
+        <text>{{dialog.title}}</text>
+      </view>
+    </view>
+
+    <view
+      class="weui-dialog__bd {{ dialog.border ? 'border' : '' }}"
+      style="{{ dialog.contentColor ? 'color:' + dialog.contentColor : '' }}"
+    >
+      <slot name="content"></slot>
+    </view>
+
+    <view class="weui-dialog__ft">
+      <view
+        class="weui-dialog__btn weui-dialog__btn_default"
+        wx:if="{{ dialog.cancelBtn && dialog.showCancel }}"
+        style="{{ dialog.cancelColor ? 'color:' + dialog.cancelColor : '' }}"
+        bindtap="cancel"
+      >
+        <text>{{dialog.cancelBtn}}</text>
+      </view>
+
+      <view
+        class="weui-dialog__btn weui-dialog__btn_primary"
+        style="{{dialog.confirmColor ? 'color:' + dialog.confirmColor : ''}}"
+        wx:if="{{dialog.sureBtn}}"
+      >
+        <view wx:if="{{dialog.phoneAuth}}">
+          <!-- 增加一个授权按钮 -->
+          <button
+            class="auth-btn"
+            wx:if="{{canIUse}}"
+            open-type="getUserInfo"
+            bindgetuserinfo="bindGetUserInfo"
+          >
+            授权登录
+          </button>
+          <view wx:else>请升级微信版本</view>
+        </view>
+        <view bindtap="sure" wx:else>
+          <text>{{dialog.sureBtn}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

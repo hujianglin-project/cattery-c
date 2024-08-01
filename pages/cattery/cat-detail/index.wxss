@@ -11,7 +11,7 @@ page {
   font-size: 32rpx;
   color: #bfbfbf;
   margin-right: 40rpx;
-  height: 82rpx;
+  height: 62rpx;
 }
 
 .nav-list.check {
@@ -35,11 +35,14 @@ page {
 
 .cat-header {
   position: relative;
+  max-height: 400rpx;
+  overflow: hidden;
 }
 
 .img {
   width: 100%;
   height: auto;
+  display: block;
   min-height: 360rpx;
   border-radius: 20rpx 20rpx 20rpx 0rpx;
 }
@@ -64,9 +67,13 @@ page {
   bottom: 20rpx;
 }
 
-.like,
-.wexin {
+.share,
+.zan,
+.wx {
   margin-top: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
 }
 
 .cat-desc-content {
@@ -93,6 +100,40 @@ page {
 .cat-update {
   font-size: 24rpx;
   color: #bfbfbf;
+}
+
+.add-cat-icon {
+  width: 120rpx;
+  height: 120rpx;
+  position: fixed;
+  right: 70rpx;
+  bottom: 40%;
+}
+
+.produce-default-img {
+  width: 340rpx;
+  height: 300rpx;
+  display: block;
+  margin: 38rpx auto 2rpx;
+}
+
+.produce-default-desc {
+  font-size: 24rpx;
+  color: #bfbfbf;
+  text-align: center;
+}
+
+.produce-default-add {
+  width: 180rpx;
+  height: 64rpx;
+  background: #ffe733;
+  border-radius: 62rpx 62rpx 62rpx 62rpx;
+  font-size: 32rpx;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 124rpx auto 20rpx;
 }
 
 .comment-submit-content {

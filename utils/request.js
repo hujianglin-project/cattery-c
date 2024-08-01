@@ -39,17 +39,17 @@ export const ajax = function ({
         let errorMessage = "";
         // 用户清了缓存，从公众号模板消息进来时会先加载模板页面的一些接口，这个时候app.js可能还没有加载
         // 不会触发里面的自动登录，没有X-Token，会报错
-        if (
-          !isLoginPath(url) &&
-          [-2000, 401, 405].indexOf(res.data.code) !== -1 &&
-          !appToken
-        ) {
-          // 如果用户的缓存中没有token，需要进行模拟登录
-          errorMessage = res.data.code;
-          return;
-        }
+        // if (
+        //   !isLoginPath(url) &&
+        //   [-9999, 401, 405].indexOf(res.data.code) !== -1 &&
+        //   !appToken
+        // ) {
+        //   // 如果用户的缓存中没有token，需要进行模拟登录
+        //   errorMessage = res.data.code;
+        //   return;
+        // }
 
-        if (res.data.code === -2000 || res.data.code === 401) {
+        if (res.data.code === -9999 || res.data.code === 401) {
           // 如果用户的缓存中没有token，需要进行模拟登录
           errorMessage = res.data.code;
 
@@ -61,7 +61,7 @@ export const ajax = function ({
             success() {
               setTimeout(() => {
                 wx.reLaunch({
-                  url: "",
+                  url: "/pages/main/login/index",
                 });
               }, 2000);
             },
@@ -70,7 +70,7 @@ export const ajax = function ({
           if (statusCode.startsWith("4")) {
             errorMessage = statusCode;
             wx.showToast({
-              title: "连接异常，请刷新后重试",
+              title: res?.data?.message || "连接异常，请刷新后重试",
               icon: "none",
             });
             reject(res);
@@ -155,7 +155,7 @@ export const upload = function ({
       header,
       success: function (res) {
         try {
-          res.data = JSON.paresolvee(res.data);
+          res.data = JSON.parse(res.data);
           resolve(res);
         } catch (error) {
           reject(error);

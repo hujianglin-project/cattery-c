@@ -1,0 +1,16 @@
+<view class="cat-list {{ index % 2 ? '' : 'left'}}" bindtap="toDetail">
+  <view class="cat-top">
+    <image src="{{ data.cover }}" class="img" mode="widthFix" />
+    <view class="status">{{ data.tagLabel }}</view>
+    <view class="date">{{ data.updateTime }}</view>
+    <view class="like">
+      <image
+        src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/love.png"
+        class="love"
+      />
+      {{ data.likeCount }}
+    </view>
+  </view>
+
+  <view class="name">{{ data.title }}</view>
+</view>

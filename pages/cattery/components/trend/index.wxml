@@ -1,19 +1,38 @@
 <view class="trend-list">
   <view class="trend-title">
-    破壳日，5月18日！超级肥，嗓门大，老四！好丑啊！哈哈哈哈！文案文案文案
+    {{ data.content }}
   </view>
-  <view class="trend-img-content">
-    <image
-      src="{{ item.url }}"
-      class="trend-img"
-      wx:for="{{ imgList }}"
-      wx:for-item="item"
+  <block wx:if="{{ data.mediaType === 1 }}">
+    <view class="trend-img-content">
+      <image
+        wx:for="{{ data.mediaList }}"
+        src="{{ item }}"
+        mode="aspectFill"
+        class="trend-img"
+      />
+    </view>
+  </block>
+
+  <!-- 视频 -->
+  <view wx:if="{{ data.mediaType === 2 }}">
+    <video
+      src="{{ data.mediaList[0] }}"
+      class="video video-hide"
+      controls
+      object-fit="fill"
+      id="video"
+      direction="0"
+      preload="auto"
     />
   </view>
 
-  <view class="trend-date">2020-05-15 18:39</view>
+  <view class="trend-date">{{ data.createTime }}</view>
   <view class="trend-bottom">
-    <text>3人觉得很赞</text>
-    <image src="{{ isLike ? '' : '' }}" class="like-img" />
+    <text>{{ data.likeCount }}人觉得很赞</text>
+    <image
+      src="{{ data.isLike ? 'https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/like-active.png' : 'https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/unlike.png' }}"
+      class="delete-img"
+      bindtap="like"
+    />
   </view>
 </view>

@@ -1,10 +1,14 @@
-import { trendLike } from "../../../../api/cattery";
+import { catteryFollow } from "../../api/cattery";
 
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
+    type: {
+      type: String,
+      value: "",
+    },
     data: {
       type: Object,
       value: {},
@@ -25,11 +29,21 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    // 喜欢或者不喜欢
-    async like() {
-      const res = await trendLike({
-        id: this.data.data.postId,
-        status: this.data.data.isLike ? 0 : 1,
+    // 详情
+    toDetail: function () {
+      wx.navigateTo({
+        url:
+          "/pages/cattery/cattery-detail/index?catteryId=" +
+          this.data.data.catteryId,
+      });
+    },
+
+    // 关注，取消关注
+    async follow() {
+      const catteryId = wx.getStorageSync("catteryId");
+      const res = await catteryFollow({
+        catteryId,
+        status: this.data.data.isFocus ? 0 : 1,
       });
 
       const { code, message } = res?.data;
@@ -45,7 +59,7 @@ Component({
       });
 
       this.setData({
-        [`data.isLike`]: !this.data.data.isLike,
+        [`data.isFocus`]: !this.data.data.isFocus,
       });
     },
   },

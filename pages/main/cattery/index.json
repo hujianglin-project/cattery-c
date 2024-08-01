@@ -1,7 +1,8 @@
 {
   "navigationBarTitleText": "猫舍",
+  "enablePullDownRefresh": true,
   "usingComponents": {
-    "cat-list": "/components/cat-list/index",
+    "cattery-list": "/components/cattery-list/index",
     "component-list": "/components/common-list/list"
   }
 }

@@ -2,7 +2,7 @@ Page({
   data: {
     avater: wx.getStorageSync("avatar") || "", //头像
     name: wx.getStorageSync("nickName") || "点击登录", // 用户名
-    desc: "登录后填写简介~", // 用户简介
+    desc: "简介~", // 用户简介
   },
 
   onLoad() {},

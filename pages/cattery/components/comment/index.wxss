@@ -31,3 +31,16 @@
   font-size: 24rpx;
   color: #bfbfbf;
 }
+
+.comment-bottom {
+  margin-top: 20rpx;
+  display: flex;
+  font-size: 24rpx;
+  color: #bfbfbf;
+  justify-content: space-between;
+}
+
+.delete-img {
+  width: 32rpx;
+  height: 28rpx;
+}

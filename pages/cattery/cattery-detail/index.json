@@ -2,8 +2,11 @@
   "navigationBarTitleText": "猫舍详情",
   "navigationBarBackgroundColor": "#2C3850",
   "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
   "navigationStyle": "custom",
   "usingComponents": {
-    "cat-list": "/components/cat-list/index"
+    "cat-list": "/components/cattery-list/index",
+    "component-list": "/components/common-list/list",
+    "album-cat-list": "../components/album-cat/index"
   }
 }

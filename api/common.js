@@ -26,3 +26,12 @@ export const wxLogin = (params) =>
     data: params,
     method: "POST",
   });
+
+// 绑定手机号码
+export const savePhone = (params) =>
+  ajax({
+    url: "/api/user/savePhone",
+    token: true,
+    data: params,
+    method: "POST",
+  });

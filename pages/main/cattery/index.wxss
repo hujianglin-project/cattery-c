@@ -1,0 +1,33 @@
+page {
+  background: #fafafa;
+}
+
+.cattery-container {
+  padding-bottom: 150rpx;
+}
+
+.breed-default-img {
+  width: 340rpx;
+  height: 300rpx;
+  display: block;
+  margin: 108rpx auto 2rpx;
+}
+
+.breed-default-desc {
+  font-size: 24rpx;
+  color: #bfbfbf;
+  text-align: center;
+}
+
+.breed-default-add {
+  width: 180rpx;
+  height: 64rpx;
+  background: #ffe733;
+  border-radius: 62rpx 62rpx 62rpx 62rpx;
+  font-size: 32rpx;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 124rpx auto;
+}

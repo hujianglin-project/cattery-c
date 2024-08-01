@@ -13,3 +13,8 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+.mut {
+  position: absolute;
+  left: 0;
+}

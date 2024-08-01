@@ -1,8 +1,15 @@
 <view class="comment-list">
-  <image class="comment-avator" src="" />
+  <image class="comment-avator" src="{{ data.avatar }}" />
   <view class="comment-content">
-    <view class="comment-name">用户昵称</view>
-    <view class="comment-desc">太可爱了</view>
-    <view class="comment-time">刚刚</view>
+    <view class="comment-name">{{ data.nickName }}</view>
+    <view class="comment-desc">{{ data.content }}</view>
+    <view class="comment-bottom">
+      <view class="comment-time">{{ data.createTimeLabel }}</view>
+      <image
+        src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/trend-delete.png"
+        class="delete-img"
+        bindtap="onDel"
+      />
+    </view>
   </view>
 </view>

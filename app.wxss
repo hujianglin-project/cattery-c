@@ -12,7 +12,70 @@ view {
   font-family: "MiSans-Normal";
 }
 
-page {
-  background: #fafafa;
-  height: 100vh;
+.required::after {
+  content: "*";
+  color: red;
+}
+
+.input {
+  color: #333333 !important;
+}
+
+/* 右箭头 */
+.right-arrow {
+  display: inline-block;
+  position: relative;
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.right-arrow::after {
+  display: inline-block;
+  content: " ";
+  height: 12rpx;
+  width: 12rpx;
+  border-width: 3rpx 3rpx 0 0;
+  border-color: #ccc8c8;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  right: 6rpx;
+  margin-top: -6rpx;
+}
+
+/* x */
+.close {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+  color: #999999;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33rpx;
+  width: 1px;
+  background-color: #999;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.arrow-icon {
+  width: 28rpx;
+  height: 28rpx;
+  display: inline-block;
+  margin-left: 12rpx;
+  background-image: url("https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/arrow.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transform: translateY(2rpx);
 }

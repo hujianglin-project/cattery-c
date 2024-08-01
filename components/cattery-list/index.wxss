@@ -5,7 +5,7 @@
   box-sizing: border-box;
   background: #ffffff;
   border-radius: 16rpx 16rpx 16rpx 16rpx;
-  margin: 20rpx auto 0;
+  margin: 20rpx auto;
   display: flex;
 }
 
@@ -19,6 +19,7 @@
   width: 150rpx;
   height: 150rpx;
   border-radius: 50%;
+  display: block;
 }
 
 .list-fans {
@@ -43,19 +44,19 @@
 
 .list-name {
   font-family: MiSans, MiSans;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 30rpx;
   color: #333333;
 }
 
 .list-label {
-  margin: 22rpx 0;
+  margin: 22rpx 0 0;
 }
 
 .label {
   padding: 12rpx;
   display: inline-block;
-  margin: 0 16rpx 16rpx 0;
+  margin: 0 16rpx 22rpx 0;
   background: #fff2f5;
   border-radius: 10rpx 10rpx 10rpx 10rpx;
   border: 2rpx solid #ffa4b4;
@@ -68,13 +69,19 @@
   text-transform: none;
 }
 
+.label:nth-of-type(2n + 2) {
+  background: #eff8ff;
+  color: #77bcfc;
+  border: 2rpx solid #77bcfc;
+}
+
 .list-desc {
-  height: 126rpx;
+  /* height: 126rpx; */
   font-family: MiSans, MiSans;
   font-weight: 400;
   font-size: 26rpx;
   color: #333333;
-  line-height: 40rpx;
+  line-height: 47rpx;
   text-align: left;
   font-style: normal;
   text-transform: none;
@@ -82,17 +89,18 @@
 
 .list-address {
   margin-top: 22rpx;
-  width: 144rpx;
-  height: 42rpx;
+  padding: 0 12rpx;
+  display: inline-block;
+  height: 44rpx;
   font-size: 20rpx;
   color: #999999;
-  line-height: 42rpx;
+  line-height: 44rpx;
   text-align: center;
   background: #f2f2f2;
   border-radius: 10rpx 10rpx 10rpx 10rpx;
 }
 
-.cat-list.deatil {
+.cat-list.detail {
   width: 100%;
   background: linear-gradient(125deg, #2c3850 0%, #babab9 100%);
   padding: 170rpx 76rpx 114rpx;
@@ -101,7 +109,73 @@
   border-radius: 0;
 }
 
-.deatil .list-name,
-.deatil .list-desc {
+.detail .list-name,
+.detail .list-desc {
   color: #ffffff;
+}
+
+.vip-content {
+  width: 146rpx;
+  height: 64rpx;
+  background: linear-gradient(270deg, #ffa048 0%, #ff3d60 100%);
+  border-radius: 78rpx;
+  text-align: center;
+  font-size: 20rpx;
+  color: #ffffff;
+  line-height: 23rpx;
+  padding-top: 10rpx;
+  box-sizing: border-box;
+}
+
+.vipExpireTime {
+  font-size: 16rpx;
+}
+
+.xiala {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 10rpx;
+  transform: translateY(2rpx);
+}
+
+.fans-count {
+  font-size: 20rpx;
+  color: #bfbfbf;
+  margin-top: 10rpx;
+  margin-top: 18rpx;
+  text-align: center;
+}
+
+.follow-add {
+  width: 116rpx;
+  height: 42rpx;
+  background: #ffe733;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 18rpx auto;
+}
+
+.follow-cancle {
+  width: 116rpx;
+  height: 42rpx;
+  background: #f2f2f2;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  color: #999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 18rpx auto;
+}
+
+.icon {
+  display: inline-block;
+  width: 44rpx;
+  height: 44rpx;
+  margin-left: 20rpx;
+  transform: translateY(16rpx);
 }

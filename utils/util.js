@@ -312,14 +312,14 @@ const setNavTitle = () => {
 };
 
 const getNavTitle = () => {
-  let title = "珍爱优恋空间";
+  let title = "猫舍";
 
   if (ENV === "produce") {
-    title = "珍爱优恋空间";
+    title = "猫舍";
   } else if (ENV.indexOf("pre") !== -1) {
-    title = "珍爱优恋空间预生产";
+    title = "猫舍预生产";
   } else {
-    title = "珍爱优恋空间测试";
+    title = "猫舍测试";
   }
 
   return title;
@@ -601,6 +601,20 @@ const isEmpty = (v) => {
   return !v;
 };
 
+// 日期加天数得最新日期
+const getNewDate = (dateTemp, days, format = "-") => {
+  var dateTemp = dateTemp.split("-");
+  var nDate = new Date(dateTemp[1] + "-" + dateTemp[2] + "-" + dateTemp[0]); //转换为MM-DD-YYYY格式
+  var millSeconds = Math.abs(nDate) + days * 24 * 60 * 60 * 1000;
+  var rDate = new Date(millSeconds);
+  var year = rDate.getFullYear();
+  var month = rDate.getMonth() + 1;
+  if (month < 10) month = "0" + month;
+  var date = rDate.getDate();
+  if (date < 10) date = "0" + date;
+  return year + format + month + format + date;
+};
+
 module.exports = {
   warn,
   once,
@@ -638,4 +652,5 @@ module.exports = {
   getOldDay,
   getUrl,
   isEmpty,
+  getNewDate,
 };

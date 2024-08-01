@@ -1,5 +1,8 @@
 App({
-  onLaunch(option) {},
+  onLaunch(option) {
+    const catteryId = option.query.catteryId;
+    wx.setStorageSync("catteryId", catteryId);
+  },
   onError(err) {
     console.log("App.onError", err);
   },

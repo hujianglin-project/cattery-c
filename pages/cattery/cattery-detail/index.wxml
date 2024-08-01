@@ -1,6 +1,6 @@
 <!--猫舍详情-->
 <view class="cattery-detail-container">
-  <cat-list type="detail"></cat-list>
+  <cat-list type="detail" data="{{ detailInfo }}"></cat-list>
   <view class="detail-content">
     <view class="cat-choose">
       <view
@@ -8,20 +8,38 @@
         wx:for="{{ navList }}"
         wx:for-item="item"
         wx:key="{{ item.id }}"
+        bind:tap="chooseNav"
+        data-id="{{ item.id }}"
       >
         {{ item.title }}
         <view class="check-content" wx:if="{{ item.id === checked }}"></view>
       </view>
     </view>
 
-    <view class="cat-content">
-      <view class="cat-list" wx:for="{{ 5 }}" wx:key="index" bindtap="toDetail">
-        <image src="" class="img" />
-        <view class="status">在售</view>
-        <view class="date">2024-06-13</view>
-        <view class="like">31</view>
-        <view class="name">可爱的橘猫三姐妹</view>
-      </view>
+    <view class="album-content">
+      <component-list
+        size="{{5}}"
+        init="{{ false }}"
+        params="{{ params }}"
+        formatFunc="{{ formatFunc }}"
+        generic:listitem="album-cat-list"
+        getListFunc="{{ getListFunc }}"
+        bind:click="onItemClick"
+        data-idx="{{index}}"
+        id="albumCatComponent"
+        showEnd="{{ false }}"
+      >
+        <view slot="default">
+          <view class="empty">
+            <image
+              class="album-default-img"
+              src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/album-cat-default.png"
+              mode="aspectFill"
+            />
+            <view class="album-default-desc">未发现小猫咪的专辑~</view>
+          </view>
+        </view>
+      </component-list>
     </view>
   </view>
 </view>

@@ -1,18 +1,32 @@
 <!-- 登录页 -->
 <view class="login-container">
-  <image src="" class="login-bg" />
+  <image
+    src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/c-login-bg.png"
+    class="login-bg"
+  />
   <view class="login-name">欢迎登录猫舍助手</view>
-  <!-- <button
-    class="login-button"
-    open-type="getPhoneNumber"
-    bindgetphonenumber="getPhoneNumber"
-  >
-    微信一键登录
-  </button> -->
   <button class="login-button" bindtap="login">
     微信一键登录
   </button>
-  <view class="login-privacy">
+  <view class="login-privacy" bindtap="privacyChecked">
+    <view class="privacy-notCheck" wx:if="{{ !checked }}"></view>
+    <image
+      wx:else
+      src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/choose-login.png"
+      class="privacy-check"
+    />
     勾选同意《用户协议及隐私政策》
   </view>
 </view>
+
+<!-- 是否同意 -->
+<component-dialog
+  wx:if="{{showDialog}}"
+  dialog-data="{{dialogData}}"
+  bind:cancel="cancel"
+  bind:sure="sure"
+>
+  <view slot="content">
+    <view class="desc">是否同意</view>
+  </view>
+</component-dialog>

@@ -1,11 +1,22 @@
-import { wxLogin } from "../../../api/common.js";
+import { wxLogin, catteryMine } from "../../../api/common.js";
 
 Page({
   data: {
     phone: "", // 用户手机号
+    checked: false, // 是否同意保密协议
+    showDialog: false,
+    dialogData: {
+      canOverFlow: true,
+      title: "用户协议和隐私政策",
+      confirmColor: "#576B95",
+      cancelColor: "",
+      sureBtn: "确认",
+      cancelBtn: "不同意",
+      border: true,
+    },
   },
 
-  onLoad() {},
+  onLoad(option) {},
 
   onShow() {},
 
@@ -14,55 +25,72 @@ Page({
     wx.switchTab({ url: "/pages/main/mine/index" });
   },
 
+  sure() {
+    this.setData({ checked: true, showDialog: false });
+    this.login();
+  },
+
   // 登录
   login: function () {
+    // 如果没有勾选隐私协议
+    if (!this.data.checked) {
+      return this.setData({ showDialog: true });
+    }
+
     const that = this;
-    console.log(this);
+    wx.showLoading({ title: "登录中..." });
+
     wx.login({
       success(res) {
         if (res.code) {
-          console.log(res.code, 11);
           //发起网络请求
           wxLogin({ code: res.code }).then((loginRes) => {
+            wx.hideLoading();
             if (loginRes?.data?.code !== 0) {
               return wx.showToast({
                 title: loginRes?.data?.message,
                 icon: "none",
               });
             }
-            const { avatar, bindPhone, nickName, token } = loginRes?.data?.data;
+            const {
+              avatar,
+              bindPhone,
+              nickName,
+              token,
+              sessionKey,
+              currentCatteryId,
+            } = loginRes?.data?.data;
 
             // 登录成功保存信息
             wx.setStorageSync("avatar", avatar);
             wx.setStorageSync("bindPhone", bindPhone);
             wx.setStorageSync("nickName", nickName);
             wx.setStorageSync("X-Token", token);
-
+            wx.setStorageSync("sessionKey", sessionKey);
             // 如果没有绑定手机号，则进行绑定提示
+            if (!bindPhone) {
+              wx.navigateTo({
+                url: "/pages/main/bindPhone/index?id=" + currentCatteryId,
+              });
+              return;
+            }
 
-            // 登录成功，去我的
             that.loginSuccess();
           });
         } else {
           console.log("登录失败！" + res.errMsg);
+          wx.hideLoading();
         }
       },
     });
   },
 
-  // 获取用户手机号
-  getPhoneNumber: (e) => {
-    if (e.detail.errMsg === "getPhoneNumber:ok") {
-      // 用户同意授权
-      this.setData({
-        phoneNumber: e.detail.encryptedData,
-      });
-      console.log(e.detail.encryptedData);
-    } else {
-      // 用户拒绝授权
-      this.setData({
-        phoneNumber: "",
-      });
-    }
+  // 勾选隐私协议
+  privacyChecked() {
+    this.setData({ checked: !this.data.checked });
+  },
+
+  cancel() {
+    this.setData({ showDialog: false, checked: false });
   },
 });

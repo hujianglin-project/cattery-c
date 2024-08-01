@@ -1,24 +1,19 @@
 <!--index.wxml-->
-<view class="cattery-container">
+<view class="cattery-container" wx:if="{{ showList }}">
   <component-list
     size="{{5}}"
-    params="{{params}}"
-    generic:listitem="cat-list"
-    getListFunc="{{getListFunc}}"
-    init="{{false}}"
+    getListFunc="{{ getListFunc }}"
+    generic:listitem="cattery-list"
+    data-idx="{{index}}"
     id="catteryListComponent"
   >
-    <view
-      slot="default"
-      class="m_loveclass-comment-default"
-      bind:tap="showComment"
-    >
+    <view slot="default">
       <image
-        class="m_comment-default-sofa"
-        src="{{iconSofa}}"
+        class="breed-default-img"
+        src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/album-cat-default.png"
         mode="aspectFill"
       />
-      <view class="m_comment-default-tips">暂无评论，点击抢沙发</view>
+      <view class="breed-default-desc">未发现猫舍的踪迹~</view>
     </view>
   </component-list>
 </view>

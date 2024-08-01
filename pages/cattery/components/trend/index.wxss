@@ -1,6 +1,6 @@
 .trend-list {
-  margin-bottom: 40rpx;
-  border: 2rpx solid #fafafa;
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid #fafafa;
 }
 
 .trend-title {
@@ -19,6 +19,7 @@
   margin-right: 14rpx;
   margin-bottom: 20rpx;
   border-radius: 10rpx 10rpx 10rpx 10rpx;
+  display: inline-block;
 }
 
 .trend-img:nth-child(3n + 3) {
@@ -38,7 +39,12 @@
   justify-content: space-between;
 }
 
-.like-img {
-  width: 28rpx;
-  height: 24rpx;
+.delete-img {
+  width: 32rpx;
+  height: 28rpx;
+}
+
+.video {
+  width: 100%;
+  margin: 20rpx 0;
 }

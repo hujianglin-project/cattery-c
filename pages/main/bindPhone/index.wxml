@@ -1,0 +1,15 @@
+<!-- 登录页 -->
+<view class="login-container">
+  <image
+    src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/c-login-bg.png"
+    class="login-bg"
+  />
+  <view class="login-name">欢迎登录猫舍助手</view>
+  <button
+    open-type="getPhoneNumber"
+    bindgetphonenumber="getPhoneNumber"
+    class="login-button"
+  >
+    手机号绑定
+  </button>
+</view>
