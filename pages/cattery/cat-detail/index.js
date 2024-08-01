@@ -121,8 +121,16 @@ Page({
       icon: "none",
     });
 
-    // 数据处理
-    this.setData({ comment: "" });
+    setTimeout(() => {
+      // 更新评论
+      this.setData({
+        checked: 2,
+        comment: "",
+      });
+
+      this.detailComponent2 = this.selectComponent("#commentComponent");
+      this.detailComponent2.setPageDataToInit();
+    }, 2000);
   },
 
   // 喜欢或者不喜欢
