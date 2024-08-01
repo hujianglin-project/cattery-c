@@ -12,11 +12,11 @@ export const catType = [
     id: 2,
   },
   {
-    title: "种公",
+    title: "种母",
     id: 3,
   },
   {
-    title: "种母",
+    title: "种公",
     id: 4,
   },
   {
