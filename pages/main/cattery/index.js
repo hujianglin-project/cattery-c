@@ -9,7 +9,15 @@ Page({
   onLoad(option) {
     const catteryId = option.catteryId;
     wx.setStorageSync("catteryId", catteryId);
-    this.getVisit(catteryId);
+
+    // 如果有id说明是访问某个猫舍，先请求，如果没有id则说明是访问之前访问过的
+    if (catteryId) {
+      this.getVisit(catteryId);
+    } else {
+      this.setData({
+        showList: true,
+      });
+    }
   },
 
   onReady: function () {

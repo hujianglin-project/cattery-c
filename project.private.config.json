@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "无id猫舍",
+          "pathName": "pages/main/cattery/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "专辑详情",
           "pathName": "pages/cattery/cat-detail/index",
           "query": "albumId=9",

@@ -28,12 +28,12 @@
     </view>
     <block wx:if="{{ type === 'detail' }}">
       <image
-        src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/album-phone.png"
+        src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/wx-icon.png"
         class="icon"
       />
 
       <image
-        src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/album-share.png"
+        src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/share.png"
         class="icon"
       />
     </block>

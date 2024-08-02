@@ -40,7 +40,7 @@ Component({
 
     // 关注，取消关注
     async follow() {
-      const catteryId = wx.getStorageSync("catteryId");
+      const catteryId = this.data.data.catteryId;
       const res = await catteryFollow({
         catteryId,
         status: this.data.data.isFocus ? 0 : 1,

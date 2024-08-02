@@ -33,6 +33,7 @@
 }
 
 .comment-bottom {
+  width: 550rpx;
   margin-top: 20rpx;
   display: flex;
   font-size: 24rpx;

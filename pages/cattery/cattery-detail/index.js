@@ -18,22 +18,28 @@ Page({
     getListFunc: albumList,
     formatFunc: formatFunc,
     params: {
-      catteryId: wx.getStorageSync("catteryId"),
       tag: 0,
     },
 
     catList: [{}],
   },
   onLoad(options) {
-    const catteryId = options.catteryId;
-    this.getDetail(catteryId);
+    this.catteryId = options.catteryId;
+    this.setData({
+      params: {
+        catteryId: this.catteryId,
+        tag: 0,
+      },
+    });
+    this.getDetail(this.catteryId);
   },
 
   onShow() {},
 
   async getDetail(catteryId) {
+    wx.showLoading();
     const res = await catteryInfo({ id: catteryId });
-
+    wx.hideLoading();
     const { code, message, data } = res?.data;
 
     if (code !== 0) {
@@ -70,7 +76,7 @@ Page({
     this.setData({
       checked: id,
       params: {
-        catteryId: wx.getStorageSync("catteryId"),
+        catteryId: this.catteryId,
         tag: id,
       },
     });
