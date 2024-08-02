@@ -1,5 +1,5 @@
 .comment-list {
-  border: 2rpx solid #fafafa;
+  border-bottom: 2rpx solid #fafafa;
   display: flex;
   padding: 40rpx 0 20rpx;
 }
@@ -12,6 +12,7 @@
 
 .comment-list .comment-content {
   margin-left: 24rpx;
+  width: 100%;
 }
 
 .comment-list .comment-name {

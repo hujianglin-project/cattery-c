@@ -61,7 +61,7 @@
   font-size: 28rpx;
   color: #333333;
   line-height: 40rpx;
-  text-align: center;
+  text-align: left;
   margin-top: 20rpx;
 }
 
