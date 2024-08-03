@@ -31,6 +31,7 @@ Component({
   methods: {
     // 详情
     toDetail: function () {
+      if (this.data.type === "detail") return;
       wx.navigateTo({
         url:
           "/pages/cattery/cattery-detail/index?catteryId=" +
@@ -60,6 +61,32 @@ Component({
 
       this.setData({
         [`data.isFocus`]: !this.data.data.isFocus,
+      });
+    },
+
+    // 联系猫舍
+    contact() {
+      wx.showModal({
+        title: "联系猫舍",
+        content: this.data.data.contactInfo,
+        showCancel: true,
+        cancelText: "取消",
+        cancelColor: "#000000",
+        confirmText: "复制",
+        confirmColor: "#576B95",
+        success: async (result) => {
+          if (result.confirm) {
+            wx.setClipboardData({
+              data: this.data.data.contactInfo,
+              success: function (res) {
+                wx.showToast({
+                  title: "复制成功",
+                  icon: "none",
+                });
+              },
+            });
+          }
+        },
       });
     },
   },

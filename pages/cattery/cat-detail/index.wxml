@@ -4,11 +4,14 @@
     <image src="{{ detailInfo.cover}}" class="img" mode="widthFix" />
     <view class="cat-status">{{ detailInfo.tagLabel }}</view>
     <view class="icon-list">
-      <image
-        class="share"
-        src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/share.png"
-        bindtap="share"
-      />
+      <button open-type="share" size="mini" class="share-button">
+        <image
+          class="share"
+          src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/share.png"
+          bindtap="share"
+        />
+      </button>
+
       <image
         wx:if="{{ !detailInfo.isLike }}"
         class="zan"
@@ -18,7 +21,7 @@
       <image
         class="wx"
         src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/wx-icon.png"
-        bindtap="onDel"
+        bindtap="contact"
       />
     </view>
   </view>

@@ -1,6 +1,5 @@
 .cat-list {
   width: 688rpx;
-  min-height: 380rpx;
   padding: 34rpx 44rpx;
   box-sizing: border-box;
   background: #ffffff;

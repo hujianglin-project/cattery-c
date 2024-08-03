@@ -156,4 +156,40 @@ Page({
       [`detailInfo.isLike`]: !this.data.detailInfo.isLike,
     });
   },
+
+  // 分享
+  onShareAppMessage() {
+    return {
+      title: this.data.detailInfo.title,
+      path:
+        "/pages/cattery/cat-detail/index?albumId=" + this.data.params.albumId,
+      imageUrl: this.data.detailInfo.cover,
+    };
+  },
+
+  // 联系猫舍
+  contact() {
+    wx.showModal({
+      title: "联系猫舍",
+      content: this.data.detailInfo.catteryInfo.contactInfo,
+      showCancel: true,
+      cancelText: "取消",
+      cancelColor: "#000000",
+      confirmText: "复制",
+      confirmColor: "#576B95",
+      success: async (result) => {
+        if (result.confirm) {
+          wx.setClipboardData({
+            data: this.data.detailInfo.catteryInfo.contactInfo,
+            success: function (res) {
+              wx.showToast({
+                title: "复制成功",
+                icon: "none",
+              });
+            },
+          });
+        }
+      },
+    });
+  },
 });

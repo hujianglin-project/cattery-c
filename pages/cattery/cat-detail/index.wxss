@@ -81,7 +81,6 @@ page {
 }
 
 .cat-name {
-  height: 40rpx;
   font-family: MiSans, MiSans;
   font-weight: 500;
   font-size: 30rpx;
@@ -165,4 +164,19 @@ page {
 .submit {
   font-size: 34rpx;
   color: #000000;
+}
+
+.share-button {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  overflow: unset;
+  background: none;
+}
+
+.share {
+  top: 0;
+  position: absolute;
+  left: 0;
+  margin-top: 0;
 }

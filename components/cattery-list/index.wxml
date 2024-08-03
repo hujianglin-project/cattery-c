@@ -30,6 +30,7 @@
       <image
         src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/wx-icon.png"
         class="icon"
+        bindtap="contact"
       />
 
       <image

@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "猫舍",
+          "pathName": "pages/main/cattery/index",
+          "query": "catteryId=2",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "无id猫舍",
           "pathName": "pages/main/cattery/index",
           "query": "",
@@ -25,13 +32,6 @@
         {
           "name": "猫舍详情",
           "pathName": "pages/cattery/cattery-detail/index",
-          "query": "catteryId=1",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "猫舍",
-          "pathName": "pages/main/cattery/index",
           "query": "catteryId=1",
           "launchMode": "default",
           "scene": null
