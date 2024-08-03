@@ -22,12 +22,14 @@
 </block>
 <!-- 显示申请已经到底了 -->
 <block wx:if="{{stop && total !== 0}}">
-  <view class="tips-bottom">{{ showEnd ? '已经到底了' : ''}}</view>
+  <view class="tips-bottom {{ showEnd ? '' : 'bottom-hideEnd' }}">
+    {{ showEnd ? '已经到底了' : ''}}
+  </view>
 </block>
 <block wx:else>
   <!-- 上滑显示加载中 -->
   <block wx:if="{{showLoading}}">
-    <view class="tips-bottom {{ showEnd ? '' : 'mut'}}">
+    <view class="tips-bottom {{ showEnd ? '' : 'bottom-more' }}">
       <view class="icon-loading" />
       <view class="loading-more">正在加载...</view>
     </view>

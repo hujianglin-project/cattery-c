@@ -14,7 +14,11 @@
   vertical-align: middle;
 }
 
-.mut {
-  position: absolute;
+.bottom-hideEnd {
+  height: 400rpx;
+}
+
+.bottom-more {
   left: 0;
+  position: absolute;
 }
