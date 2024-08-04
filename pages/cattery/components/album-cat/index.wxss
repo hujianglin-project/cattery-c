@@ -12,7 +12,7 @@
 } */
 
 .img {
-  width: 320rpx;
+  width: 324rpx;
   display: block;
   border-radius: 16rpx 0rpx 16rpx 16rpx;
 }
@@ -61,7 +61,7 @@
   font-size: 28rpx;
   color: #333333;
   line-height: 40rpx;
-  height: 40rpx;
+  max-height: 80rpx;
   text-align: left;
   margin-top: 20rpx;
   /* 文本溢出时隐藏 */
@@ -69,7 +69,7 @@
   /* 文本溢出时省略号显示 */
   text-overflow: ellipsis;
   /* 文本不换行 */
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .love {
@@ -81,5 +81,6 @@
 .cat-top {
   position: relative;
   max-height: 300rpx;
+  width: 324rpx;
   overflow: hidden;
 }
