@@ -14,9 +14,9 @@
   vertical-align: middle;
 }
 
-.bottom-hideEnd {
+/* .bottom-hideEnd {
   height: 400rpx;
-}
+} */
 
 .bottom-more {
   left: 0;
