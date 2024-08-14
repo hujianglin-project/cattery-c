@@ -7,6 +7,8 @@
       <image
         wx:for="{{ data.mediaList }}"
         src="{{ item }}"
+        catch:tap="previewImage"
+        data-src="{{ item }}"
         mode="aspectFill"
         class="trend-img"
       />
@@ -19,10 +21,10 @@
       src="{{ data.mediaList[0] }}"
       class="video video-hide"
       controls
-      object-fit="fill"
       id="video"
-      direction="0"
       preload="auto"
+      play-btn-position="center"
+      object-fit="cover"
     />
   </view>
 
