@@ -9,7 +9,7 @@
           class="share"
           src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/share.png"
           bindtap="share"
-          wx:if="{{detailInfo.isVip}}"
+          wx:if="{{detailInfo.catteryInfo.isVip}}"
         />
       </button>
 
@@ -23,7 +23,7 @@
         class="wx"
         src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/wx-icon.png"
         bindtap="contact"
-        wx:if="{{detailInfo.isVip}}"
+        wx:if="{{detailInfo.catteryInfo.isVip}}"
       />
     </view>
   </view>
@@ -93,7 +93,7 @@
 </view>
 
 <!-- 发表评论 -->
-<view class="comment-submit-content" wx:if="{{detailInfo.isVip}}">
+<view class="comment-submit-content" wx:if="{{detailInfo.catteryInfo.isVip}}">
   <input
     bindinput="inputComment"
     value="{{ comment }}"
