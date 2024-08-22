@@ -2,13 +2,14 @@
 <view class="cat-detail-container">
   <view class="cat-header">
     <image src="{{ detailInfo.cover}}" class="img" mode="widthFix" />
-    <view class="cat-status">{{ detailInfo.tagLabel }}</view>
+    <view class="cat-status cat-status{{detailInfo.tag}}">{{ detailInfo.tagLabel }}</view>
     <view class="icon-list">
       <button open-type="share" size="mini" class="share-button">
         <image
           class="share"
           src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/share.png"
           bindtap="share"
+          wx:if="{{detailInfo.isVip}}"
         />
       </button>
 
@@ -22,6 +23,7 @@
         class="wx"
         src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/wx-icon.png"
         bindtap="contact"
+        wx:if="{{detailInfo.isVip}}"
       />
     </view>
   </view>
@@ -91,7 +93,7 @@
 </view>
 
 <!-- 发表评论 -->
-<view class="comment-submit-content">
+<view class="comment-submit-content" wx:if="{{detailInfo.isVip}}">
   <input
     bindinput="inputComment"
     value="{{ comment }}"

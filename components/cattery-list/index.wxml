@@ -31,11 +31,13 @@
         src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/wx-icon.png"
         class="icon"
         bindtap="contact"
+        wx:if="{{data.isVip}}"
       />
 
       <image
         src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/share.png"
         class="icon"
+        wx:if="{{data.isVip}}"
       />
     </block>
   </view>

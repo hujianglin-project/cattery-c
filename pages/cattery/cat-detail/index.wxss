@@ -61,6 +61,26 @@ page {
   text-align: center;
 }
 
+.cat-status1 {
+  background: #08ba6f;
+}
+
+.cat-status2 {
+  background: #A50A13;
+}
+
+.cat-status3 {
+  background: #FF498B;
+}
+
+.cat-status4 {
+  background: #22AAF6;
+}
+
+.cat-status5 {
+  background: #FFB03A;
+}
+
 .icon-list {
   position: absolute;
   right: 20rpx;

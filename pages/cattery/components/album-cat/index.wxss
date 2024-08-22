@@ -14,7 +14,7 @@
 .img {
   width: 324rpx;
   display: block;
-  border-radius: 16rpx 0rpx 16rpx 16rpx;
+  /* border-radius: 16rpx 0rpx 16rpx 16rpx; */
 }
 
 .status {
@@ -29,6 +29,26 @@
   color: #ffffff;
   text-align: center;
   line-height: 40rpx;
+}
+
+.status1 {
+  background: #08ba6f;
+}
+
+.status2 {
+  background: #A50A13;
+}
+
+.status3 {
+  background: #FF498B;
+}
+
+.status4 {
+  background: #22AAF6;
+}
+
+.status5 {
+  background: #FFB03A;
 }
 
 .date {
@@ -80,7 +100,7 @@
 
 .cat-top {
   position: relative;
-  max-height: 300rpx;
+  max-height: 420rpx;
   width: 324rpx;
   overflow: hidden;
 }
