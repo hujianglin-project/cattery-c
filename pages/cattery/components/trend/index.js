@@ -51,7 +51,7 @@ Component({
 
     // 预览图片
     previewImage(e) {
-      let current = e.target.dataset.src;
+      let current = e.currentTarget.dataset.src;
 
       wx.previewImage({
         current: current, // 当前显示图片的http链接
