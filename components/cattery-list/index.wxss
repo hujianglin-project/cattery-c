@@ -170,11 +170,25 @@
   align-items: center;
   margin: 18rpx auto;
 }
-
 .icon {
   display: inline-block;
   width: 44rpx;
   height: 44rpx;
   margin-left: 20rpx;
   transform: translateY(16rpx);
+}
+.share-btn {
+  overflow: unset;
+  background: none;
+  padding: 0rpx;
+  margin: 0rpx;
+  /* display: inline-block; */
+  /* position: absolute; */
+  width: 44rpx;
+  height: 44rpx;
+  /* transform: translateY(16rpx); */
+}
+.share-img {
+  position: absolute;
+  left: 0rpx;
 }

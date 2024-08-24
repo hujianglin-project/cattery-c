@@ -33,12 +33,15 @@
         bindtap="contact"
         wx:if="{{data.isVip}}"
       />
-
-      <image
-        src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/share.png"
-        class="icon"
-        wx:if="{{data.isVip}}"
-      />
+      
+      <button open-type="share" size="mini" class="share-btn">
+        <image
+          src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/share.png"
+          class="icon share-img"
+          wx:if="{{data.isVip}}"
+        />
+      </button>
+      
     </block>
   </view>
 </view>

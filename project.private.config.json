@@ -9,9 +9,16 @@
     "miniprogram": {
       "list": [
         {
+          "name": "猫舍详情",
+          "pathName": "pages/cattery/cattery-detail/index",
+          "query": "catteryId=15",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "猫舍",
           "pathName": "pages/main/cattery/index",
-          "query": "catteryId=2",
+          "query": "catteryId=15",
           "launchMode": "default",
           "scene": null
         },
@@ -26,13 +33,6 @@
           "name": "专辑详情",
           "pathName": "pages/cattery/cat-detail/index",
           "query": "albumId=9",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "猫舍详情",
-          "pathName": "pages/cattery/cattery-detail/index",
-          "query": "catteryId=1",
           "launchMode": "default",
           "scene": null
         },

@@ -58,9 +58,10 @@ Component({
         title: "操作成功",
         icon: "none",
       });
-
+      var focusCount = !this.data.data.isFocus ? this.data.data.fansCount + 1 : this.data.data.fansCount - 1;
       this.setData({
         [`data.isFocus`]: !this.data.data.isFocus,
+        [`data.fansCount`]: focusCount,
       });
     },
 
@@ -89,5 +90,23 @@ Component({
         },
       });
     },
+    // // 实现分享功能
+    // onShareAppMessage(options) {
+    //   console.log(options);
+    //   return {
+    //     title: this.data.data.catteryName, // 分享的标题
+    //     // path: '/pages/cattery/cattery-detail/index?catteryId=' + this.data.data.catteryId,
+    //     path: '/pages/cattery/cat-detail/index?albumId=' + 1,
+    //     imageUrl: this.data.data.catteryAvatar, // 自定义分享图片
+    //     success: function (res) {
+    //       // 分享成功后的回调
+    //       console.log('分享成功', res);
+    //     },
+    //     fail: function (res) {
+    //       // 分享失败后的回调
+    //       console.log('分享失败', res);
+    //     }
+    //   };
+    // },
   },
 });
