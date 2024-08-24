@@ -63,7 +63,7 @@ export const ajax = function ({
                 wx.reLaunch({
                   url: "/pages/main/login/index",
                 });
-              }, 2000);
+              }, 500);
             },
           });
         } else {

@@ -61,6 +61,8 @@ Page({
               currentCatteryId,
             } = loginRes?.data?.data;
 
+            console.log(loginRes)
+
             // 登录成功保存信息
             wx.setStorageSync("avatar", avatar);
             wx.setStorageSync("bindPhone", bindPhone);

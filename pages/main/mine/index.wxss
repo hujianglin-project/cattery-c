@@ -24,11 +24,27 @@
 
 .header-user {
   padding-top: 10rpx;
+  display: block;
 }
 
 .user-name {
+  display: inline-block;
   font-size: 32rpx;
+  line-height: 32rpx;
   color: #333333;
+}
+
+.bind-phone {
+  display: inline-block;
+  margin-left: 20rpx;
+  color: #FFFFFF;
+  height: 32rpx;
+  padding: 0rpx 20rpx;
+  line-height: 32rpx;
+  font-size: 20rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  background-color: rgba(255, 41, 41, 0.60);
 }
 
 .user-desc {
