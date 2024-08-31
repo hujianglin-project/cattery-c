@@ -17,20 +17,21 @@
     </view>
 
     <view class="album-content">
-      <component-list
-        size="{{5}}"
-        init="{{ false }}"
-        params="{{ params }}"
-        formatFunc="{{ formatFunc }}"
-        generic:listitem="album-cat-list"
-        getListFunc="{{ getListFunc }}"
-        bind:click="onItemClick"
-        data-idx="{{index}}"
-        id="albumCatComponent"
-        showEnd="{{ false }}"
-      >
-        <view slot="default">
-          <view class="empty">
+      <!-- 左边一列 -->
+      <view class="fall-left">
+        <block wx:for="{{leftList}}" wx:key="id">
+          <album-cat-list data="{{ item }}" index="{{ index }}"></album-cat-list>
+        </block>
+      </view>
+      <!--右边一列 -->
+      <view class="fall-right">
+        <block wx:for="{{rightList}}" wx:key="id">
+          <album-cat-list data="{{ item }}" index="{{ index }}"></album-cat-list>
+        </block>
+      </view>
+
+      <view wx:if="{{ lists.length === 0 }}">
+        <view class="empty">
             <image
               class="album-default-img"
               src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/album-cat-default.png"
@@ -38,8 +39,18 @@
             />
             <view class="album-default-desc">未发现小猫咪的专辑~</view>
           </view>
-        </view>
-      </component-list>
+      </view>
+      
+      
+      
     </view>
+    
   </view>
+  <!-- 显示申请已经到底了 -->
+  <block wx:if="{{showLoading}}">
+    <view class="tips-bottom">
+      <view class="icon-loading" />
+      <view class="loading-more">正在加载...</view>
+    </view>
+  </block>
 </view>

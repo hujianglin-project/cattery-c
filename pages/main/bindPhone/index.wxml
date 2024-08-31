@@ -4,7 +4,7 @@
     src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/c-login-bg.png"
     class="login-bg"
   />
-  <view class="login-name">欢迎登录猫舍助手</view>
+  <view class="login-name">欢迎登录喵主助手</view>
   <button
     open-type="getPhoneNumber"
     bindgetphonenumber="getPhoneNumber"

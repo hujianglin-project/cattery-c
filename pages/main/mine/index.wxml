@@ -5,9 +5,8 @@
       <image src="{{ avater }}" class="avater" />
       <view class="header-user">
         <view class="user-name">{{ name }}</view>
-        <view class="bind-phone">绑定手机号</view>
+        <view class="bind-phone" wx:if="{{!bindPhone}}" bind:tap="goBindPhone">绑定手机号</view>
         <view class="user-desc">{{ desc }}</view>
-        
       </view>
     </view>
     <image

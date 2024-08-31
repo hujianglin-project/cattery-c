@@ -41,7 +41,7 @@
       class="nav-list {{ item.id === checked ? 'check' : ''}}"
       wx:for="{{ navList }}"
       wx:for-item="item"
-      wx:key="{{ item.id }}"
+      wx:key="id"
       bindtap="choose"
       data-id="{{ item.id }}"
     >

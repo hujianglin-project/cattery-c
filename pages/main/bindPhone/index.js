@@ -31,6 +31,7 @@ Page({
 
       if (res.data.code === 0) {
         this.loginSuccess();
+        wx.setStorageSync('bindPhone', true)
       } else {
         wx.showToast({
           title: res?.data?.message || "请重试",

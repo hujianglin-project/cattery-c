@@ -84,6 +84,7 @@
   max-height: 80rpx;
   text-align: left;
   margin-top: 20rpx;
+  width: 324rpx;
   /* 文本溢出时隐藏 */
   overflow: hidden;
   /* 文本溢出时省略号显示 */
@@ -103,4 +104,74 @@
   max-height: 420rpx;
   width: 324rpx;
   overflow: hidden;
+}
+
+.album-content {
+  padding: 210rpx 34rpx 260rpx;
+  /* 经过4种方案实现对比，这个为最佳 */
+  position: relative;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.album-default-img {
+  width: 340rpx;
+  height: 300rpx;
+  display: block;
+  margin: 108rpx auto 2rpx;
+}
+
+.album-default-desc {
+  font-size: 24rpx;
+  color: #bfbfbf;
+  text-align: center;
+}
+
+.album-default-add {
+  width: 180rpx;
+  height: 64rpx;
+  background: #ffe733;
+  border-radius: 62rpx 62rpx 62rpx 62rpx;
+  font-size: 32rpx;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 124rpx auto;
+}
+
+.picker {
+  font-size: 26rpx;
+  color: #333333;
+  min-width: 150rpx;
+  text-align: right;
+}
+
+.empty {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tips-bottom {
+  margin-top: 40rpx;
+  margin-bottom: 95rpx;
+  padding: 10rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #999;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 145rpx;
+}
+
+.loading-more {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.fall-left {
+  margin-right: 36rpx;
 }
