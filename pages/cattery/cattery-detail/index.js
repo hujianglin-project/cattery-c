@@ -194,7 +194,6 @@ Page({
       this.data.getListFunc &&
       this.data
         .getListFunc({
-          size,
           lastIndex,
           ...params,
         })

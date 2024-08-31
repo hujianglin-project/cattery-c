@@ -58,3 +58,7 @@
   text-align: center;
   line-height: 96rpx;
 }
+
+.privacy-label {
+  color: #3292ff;
+}

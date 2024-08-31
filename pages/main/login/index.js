@@ -92,6 +92,12 @@ Page({
     this.setData({ checked: !this.data.checked });
   },
 
+  goPrivacy() {
+    wx.navigateTo({
+      url: "/pages/main/privacy/index",
+    });
+  },
+
   cancel() {
     this.setData({ showDialog: false, checked: false });
   },

@@ -1,0 +1,23 @@
+.privacy-container {
+  width: 650;
+  padding: 30rpx 50rpx 80rpx 50rpx;
+}
+.privacy-title1 {
+  font-size: 36rpx;
+  font-weight: 500;
+  padding-bottom: 40rpx;
+}
+.privacy-title2 {
+  font-size: 32rpx;
+  font-weight: 400;
+  padding: 20rpx 0rpx;
+}
+.privacy-title3 {
+  font-size: 28rpx;
+  font-weight: 400;
+  padding: 10rpx 0rpx;
+}
+.privacy-content {
+  font-size: 24rpx;
+  color: #333;
+}

@@ -37,6 +37,13 @@
           "scene": null
         },
         {
+          "name": "用户协议与隐私政策",
+          "pathName": "pages/main/privacy/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/cattery/cattery-detail/index",
           "pathName": "pages/cattery/cattery-detail/index",
           "query": "",

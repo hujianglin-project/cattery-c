@@ -3,7 +3,8 @@
     "pages/main/cattery/index",
     "pages/main/mine/index",
     "pages/main/login/index",
-    "pages/main/bindPhone/index"
+    "pages/main/bindPhone/index",
+    "pages/main/privacy/index"
   ],
   "subpackages": [
     {
