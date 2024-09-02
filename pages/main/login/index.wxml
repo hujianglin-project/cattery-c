@@ -4,7 +4,7 @@
     src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/c-login-bg.png"
     class="login-bg"
   />
-  <view class="login-name">欢迎登录喵主助手</view>
+  <view class="login-name">欢迎登录养个喵咪</view>
   <button class="login-button" bindtap="login">
     微信一键登录
   </button>
@@ -15,7 +15,7 @@
       src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/choose-login.png"
       class="privacy-check"
     />
-    勾选同意《<a bind:tap="goPrivacy" class="privacy-label">用户协议及隐私政策</a>》
+    勾选同意<a bind:tap="goPrivacy" class="privacy-label">《用户协议及隐私政策》</a>
   </view>
 </view>
 
