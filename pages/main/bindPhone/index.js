@@ -41,6 +41,10 @@ Page({
     });
   },
 
+  jumpMain: function() {
+    wx.switchTab({ url: "/pages/main/mine/index" });
+  },
+
   // 获取用户手机号
   getPhoneNumber: function (e) {
     if (!this.data.clocked) {

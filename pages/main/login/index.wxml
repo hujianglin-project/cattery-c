@@ -6,7 +6,7 @@
   />
   <view class="login-name">欢迎登录养个喵咪</view>
   <button class="login-button" bindtap="login">
-    手机号码快捷登录
+    一键登录
   </button>
   <view class="login-privacy" bindtap="privacyChecked">
     <view class="privacy-notCheck" wx:if="{{ !checked }}"></view>

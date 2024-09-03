@@ -12,4 +12,5 @@
   >
     手机号绑定
   </button>
+  <view class="jump-main" bind:tap="jumpMain">跳过</view>
 </view>

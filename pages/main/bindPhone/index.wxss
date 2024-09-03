@@ -58,3 +58,9 @@
   text-align: center;
   line-height: 96rpx;
 }
+.jump-main {
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  color: #3292ff;
+}
