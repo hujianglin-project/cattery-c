@@ -17,6 +17,7 @@
     />
     勾选同意<a bind:tap="goPrivacy" class="privacy-label">《用户协议及隐私政策》</a>
   </view>
+  <view class="jump-main" bind:tap="jumpMain">跳过</view>
 </view>
 
 <!-- 是否同意 -->

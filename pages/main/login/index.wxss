@@ -62,3 +62,8 @@
 .privacy-label {
   color: #3292ff;
 }
+.jump-main {
+  text-align: center;
+  font-size: 28rpx;
+  color: #3292ff;
+}

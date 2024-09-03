@@ -98,6 +98,10 @@ Page({
     });
   },
 
+  jumpMain() {
+    wx.switchTab({ url: "/pages/main/mine/index" });
+  },
+
   cancel() {
     this.setData({ showDialog: false, checked: false });
   },

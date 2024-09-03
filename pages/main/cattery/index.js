@@ -7,6 +7,14 @@ Page({
   },
 
   onLoad(option) {
+
+    if (!wx.getStorageSync('X-Token')) {
+      return wx.showToast({
+        title: "登录后查看关注的猫舍哦~",
+        icon: "none",
+      });
+    }
+
     const catteryId = option.catteryId;
     wx.setStorageSync("catteryId", catteryId);
 

@@ -1,7 +1,14 @@
 <!--我的-->
 <view class="mine-container">
   <view class="header">
-    <view class="header-left">
+    <view class="header-left" wx:if="{{!isLogin}}" bind:tap="goLogin">
+      <image src="https://duoduo-cattery.oss-cn-shenzhen.aliyuncs.com/common/c-mine-user.png" class="avater" />
+      <view class="header-user">
+        <view class="user-name">点击登录</view>
+        <view class="user-desc"></view>
+      </view>
+    </view>
+    <view class="header-left" wx:if="{{isLogin}}">
       <image src="{{ avater }}" class="avater" />
       <view class="header-user">
         <view class="user-name">{{ name }}</view>

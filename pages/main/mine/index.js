@@ -6,15 +6,20 @@ Page({
     name: wx.getStorageSync("nickName") || "点击登录", // 用户名
     desc: "hello，铲屎官~", // 用户简介
     bindPhone: true,
+    isLogin: false,
   },
 
   onLoad() {
     if (!wx.getStorageSync('X-Token')) {
-      setTimeout(() => {
-        wx.reLaunch({
-          url: "/pages/main/login/index",
-        });
-      }, 500);
+      // setTimeout(() => {
+      //   wx.reLaunch({
+      //     url: "/pages/main/login/index",
+      //   });
+      // }, 500);
+    } else {
+      this.setData({
+        isLogin: true,
+      })
     }
     const bindPhone = wx.getStorageSync('bindPhone');
     this.setData({
@@ -44,5 +49,11 @@ Page({
     wx.navigateTo({
       url: "/pages/main/bindPhone/index",
     })
-  }
+  },
+
+  goLogin: () => {
+    wx.reLaunch({
+      url: "/pages/main/login/index",
+    });
+  },
 });
