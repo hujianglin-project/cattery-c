@@ -86,6 +86,7 @@ Page({
   },
 
   onReady: function () {
+    wx.setStorageSync("albumRefresh", true);
     this.setPageDataToInit();
   },
 
