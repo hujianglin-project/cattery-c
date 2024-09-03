@@ -290,7 +290,9 @@ Page({
     for (let i = 0, len = listData.length; i < len; i++) {
       let tmp = listData[i];
       // 获取图片尺寸
-      const { width, height } = await this.loadImage(listData[i].cover);
+      const width = listData[i].coverWidth;
+      const height = listData[i].coverHeight;
+      // const { width, height } = await this.loadImage(listData[i].cover);
       tmp.width = parseInt(width);
       tmp.height = parseInt(height);
       tmp.itemWidth = itemWidth;
